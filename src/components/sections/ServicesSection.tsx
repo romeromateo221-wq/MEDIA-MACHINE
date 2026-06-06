@@ -2,44 +2,36 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Tv2, Zap, Radio, Volume2, Camera, Layers, Boxes, Cog } from 'lucide-react'
+import { Tv2, Zap, Radio, Volume2, Camera, Layers, Boxes, Cog, Palette, FileText, Lightbulb, Wrench } from 'lucide-react'
 
 const services = [
   {
+    icon: Palette,
+    title: 'Publicidad y Branding',
+    description: 'Identidad visual y estrategia de marca que destaca tu empresa.',
+    services: ['Rotulación', 'Branding Corporativo', 'Señalética', 'Publicidad Exterior'],
+    color: 'from-blue-500 to-cyan-500',
+  },
+  {
+    icon: FileText,
+    title: 'Producción Gráfica',
+    description: 'Impresión de calidad superior en todos los formatos.',
+    services: ['Impresión Gran Formato', 'Viniles', 'Lonas', 'Material POP'],
+    color: 'from-purple-500 to-pink-500',
+  },
+  {
     icon: Tv2,
-    title: 'Pantallas LED',
-    description: 'Pantallas LED de alta calidad para interiores y exteriores con tecnología de punta.',
-    services: ['LED Indoor', 'LED Outdoor', 'Pantallas Publicitarias', 'Pantallas para Eventos'],
+    title: 'Soluciones Audiovisuales',
+    description: 'Tecnología visual de última generación para impactar.',
+    services: ['Pantallas LED', 'Video Walls', 'Pantallas Interactivas', 'Sistemas Multimedia'],
+    color: 'from-red-500 to-orange-500',
   },
   {
-    icon: Radio,
-    title: 'Señalización Digital',
-    description: 'Soluciones de digital signage para comunicación corporativa efectiva.',
-    services: ['Carteles Digitales', 'Totem Digital', 'Menu Boards', 'Webs Display'],
-  },
-  {
-    icon: Layers,
-    title: 'Pantallas Interactivas',
-    description: 'Tecnología táctil para experiencias interactivas inmersivas.',
-    services: ['Pantallas Táctiles', 'Pizarras Inteligentes', 'Kioscos', 'Instalaciones Interactivas'],
-  },
-  {
-    icon: Volume2,
-    title: 'Sistemas de Audio',
-    description: 'Audio profesional de calidad de concierto para cualquier espacio.',
-    services: ['Audio para Auditorios', 'Sound Systems', 'Audio Ambiental', 'Conferencias'],
-  },
-  {
-    icon: Camera,
-    title: 'Sistemas de Video',
-    description: 'Soluciones de video profesional para producción y transmisión.',
-    services: ['Video Walls', 'Proyectores', 'Streaming Profesional', 'Video Production'],
-  },
-  {
-    icon: Cog,
-    title: 'Servicios Técnicos',
-    description: 'Instalación, configuración, mantenimiento y soporte técnico especializado.',
-    services: ['Diseño', 'Instalación', 'Mantenimiento', 'Soporte 24/7'],
+    icon: Wrench,
+    title: 'Tecnología',
+    description: 'Instalación, configuración e integración de sistemas.',
+    services: ['Instalación Profesional', 'Configuración', 'Integración', 'Soporte 24/7'],
+    color: 'from-green-500 to-emerald-500',
   },
 ]
 
@@ -64,12 +56,12 @@ export default function ServicesSection() {
             Nuestros <span className="gradient-text">Servicios</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Soluciones audiovisuales completas e integrales para todos tus proyectos tecnológicos.
+            Soluciones publicitarias, audiovisuales y tecnológicas completas e integrales para todos tus proyectos.
           </p>
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service, idx) => {
             const Icon = service.icon
             return (
@@ -84,7 +76,7 @@ export default function ServicesSection() {
                 {/* Icon */}
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
-                  className="w-16 h-16 bg-gradient-to-br from-primary-500 to-accent rounded-lg flex items-center justify-center mb-6"
+                  className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-lg flex items-center justify-center mb-6`}
                 >
                   <Icon size={32} className="text-white" />
                 </motion.div>
@@ -103,21 +95,37 @@ export default function ServicesSection() {
                 <ul className="space-y-2 mb-6">
                   {service.services.map((item, i) => (
                     <li key={i} className="flex items-start space-x-2 text-sm text-gray-300">
-                      <span className="text-accent mt-1">→</span>
+                      <span className="text-accent mt-1">✓</span>
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
 
                 {/* CTA */}
-                <button className="text-accent hover:text-white transition-colors font-semibold text-sm flex items-center space-x-2">
+                <button className="text-accent hover:text-white transition-colors font-semibold text-sm flex items-center space-x-2 group">
                   <span>Saber más</span>
-                  <span>→</span>
+                  <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </button>
               </motion.div>
             )
           })}
         </div>
+
+        {/* Why Choose Us */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-20 glass-dark p-12 rounded-xl text-center"
+        >
+          <h3 className="text-2xl font-bold text-white mb-4">¿Por qué elegirnos?</h3>
+          <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+            Con más de 10 años de experiencia, hemos ayudado a más de 200 clientes a transformar sus ideas en soluciones reales. Nuestro equipo de profesionales está comprometido con la excelencia y la innovación.
+          </p>
+          <button className="btn-primary">
+            Solicitar Consulta Gratis
+          </button>
+        </motion.div>
       </div>
     </section>
   )
