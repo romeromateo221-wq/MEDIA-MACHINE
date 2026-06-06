@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { ArrowRight, CheckCircle } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
 export default function HeroSection() {
   return (
@@ -10,7 +10,7 @@ export default function HeroSection() {
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-96 h-96 bg-primary-500 rounded-full blur-3xl opacity-20 animate-pulse-slow" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent rounded-full blur-3xl opacity-20 animate-pulse-slow animation-delay-2000" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent rounded-full blur-3xl opacity-20 animate-pulse-slow" />
       </div>
 
       {/* Grid Background */}
@@ -32,7 +32,7 @@ export default function HeroSection() {
               className="inline-flex items-center space-x-2 px-4 py-2 bg-primary-500/10 border border-primary-500/30 rounded-full mb-6"
             >
               <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-              <span className="text-accent text-sm font-semibold">Tecnología de Punta</span>
+              <span className="text-accent text-sm font-semibold">Innovación Tecnológica</span>
             </motion.div>
 
             {/* Main Title */}
@@ -42,8 +42,8 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight"
             >
-              Transformamos espacios mediante
-              <span className="block gradient-text">tecnología inteligente</span>
+              Construimos 
+              <span className="block gradient-text">tus ideas</span>
             </motion.h1>
 
             {/* Subtitle */}
@@ -53,7 +53,7 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-xl text-gray-400 mb-8 max-w-lg"
             >
-              Soluciones audiovisuales, pantallas LED, señalización digital y sistemas tecnológicos para empresas, instituciones y eventos.
+              Soluciones publicitarias, audiovisuales y tecnológicas para empresas, instituciones y marcas que buscan destacar.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -67,7 +67,7 @@ export default function HeroSection() {
                 <span>Solicitar Cotización</span>
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="btn-secondary">Contáctanos</button>
+              <button className="btn-secondary">Ver Servicios</button>
             </motion.div>
 
             {/* Stats */}
@@ -78,9 +78,9 @@ export default function HeroSection() {
               className="flex gap-8 mt-12 pt-8 border-t border-white/10"
             >
               {[
-                { value: '500+', label: 'Proyectos Realizados' },
-                { value: '98%', label: 'Clientes Satisfechos' },
-                { value: '24/7', label: 'Soporte Técnico' },
+                { value: '500+', label: 'Proyectos' },
+                { value: '200+', label: 'Clientes' },
+                { value: '10+', label: 'Años' },
               ].map((stat, idx) => (
                 <div key={idx}>
                   <div className="text-3xl font-bold gradient-text">{stat.value}</div>
@@ -125,7 +125,7 @@ export default function HeroSection() {
                     <span className="text-white font-display text-3xl font-bold">MM</span>
                   </motion.div>
                   <h3 className="text-white font-semibold text-lg">MEDIA MACHINE</h3>
-                  <p className="text-gray-300 text-sm mt-2">Innovación Tecnológica</p>
+                  <p className="text-gray-300 text-sm mt-2">Quito - Ecuador</p>
                 </div>
               </div>
             </div>
