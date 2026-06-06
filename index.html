@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Media Machine | Construimos Tus Ideas</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--gold:#FFC107;
+--dark:#0b0b0b;
+--gray:#161616;
+--white:#ffffff;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Montserrat',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#000;
+color:white;
+overflow-x:hidden;
+}
+
+header{
+position:fixed;
+width:100%;
+top:0;
+left:0;
+z-index:999;
+background:rgba(0,0,0,.95);
+backdrop-filter:blur(10px);
+}
+
+.navbar{
+max-width:1400px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 5%;
+}
+
+.logo{
+font-size:2rem;
+font-weight:800;
+letter-spacing:2px;
+}
+
+.logo span{
+color:var(--gold);
+}
+
+.nav-links{
+display:flex;
+gap:30px;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.nav-links a:hover{
+color:var(--gold);
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
+url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1800&q=80');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:5rem;
+font-weight:800;
+}
+
+.hero h1 span{
+color:var(--gold);
+}
+
+.hero p{
+margin-top:20px;
+font-size:1.3rem;
+max-width:800px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 40px;
+background:var(--gold);
+color:black;
+font-weight:700;
+border-radius:40px;
+text-decoration:none;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+section{
+padding:100px 8%;
+}
+
+.section-title{
+font-size:3rem;
+text-align:center;
+margin-bottom:60px;
+font-weight:800;
+}
+
+.section-title span{
+color:var(--gold);
+}
+
+.about{
+max-width:1000px;
+margin:auto;
+text-align:center;
+line-height:1.8;
+font-size:1.1rem;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.service-card{
+background:#111;
+padding:35px;
+border-radius:20px;
+transition:.3s;
+border:1px solid #222;
+}
+
+.service-card:hover{
+transform:translateY(-10px);
+border-color:var(--gold);
+}
+
+.service-card h3{
+color:var(--gold);
+margin-bottom:15px;
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:30px;
+}
+
+.project{
+background:#111;
+border-radius:20px;
+overflow:hidden;
+}
+
+.project img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.project-content{
+padding:25px;
+}
+
+.project-content h3{
+color:var(--gold);
+margin-bottom:10px;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
+}
+
+.stat{
+background:#111;
+padding:40px;
+text-align:center;
+border-radius:20px;
+}
+
+.stat h2{
+font-size:3rem;
+color:var(--gold);
+}
+
+.contact{
+text-align:center;
+background:#111;
+border-radius:30px;
+}
+
+.contact p{
+margin-bottom:15px;
+}
+
+footer{
+padding:30px;
+text-align:center;
+background:#000;
+border-top:1px solid #222;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:3rem;
+}
+
+.nav-links{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+MEDIA <span>MACHINE</span>
+</div>
+
+<div class="nav-links">
+<a href="#inicio">Inicio</a>
+<a href="#nosotros">Nosotros</a>
+<a href="#servicios">Servicios</a>
+<a href="#proyectos">Proyectos</a>
+<a href="#contacto">Contacto</a>
+</div>
+
+</nav>
+
+</header>
+
+<section class="hero" id="inicio">
+
+<div>
+
+<h1>CONSTRUIMOS <span>TUS IDEAS</span></h1>
+
+<p>
+Diseño, construcción, remodelación y desarrollo de franquicias comerciales con estándares de calidad y diseño innovador.
+</p>
+
+<a href="#contacto" class="btn">
+Solicitar Cotización
+</a>
+
+</div>
+
+</section>
+
+<section id="nosotros">
+
+<h2 class="section-title">
+Sobre <span>Nosotros</span>
+</h2>
+
+<div class="about">
+
+<p>
+Media Machine es una empresa especializada en diseño arquitectónico,
+construcción, remodelación de espacios comerciales, franquicias,
+restaurantes, oficinas y proyectos corporativos.
+</p>
+
+<br>
+
+<p>
+Transformamos ideas en espacios funcionales, modernos y rentables,
+ofreciendo soluciones integrales desde la conceptualización hasta la entrega final.
+</p>
+
+</div>
+
+</section>
+
+<section id="servicios">
+
+<h2 class="section-title">
+Nuestros <span>Servicios</span>
+</h2>
+
+<div class="services">
+
+<div class="service-card">
+<h3>Diseño Arquitectónico</h3>
+<p>Diseño conceptual y ejecutivo para proyectos comerciales y corporativos.</p>
+</div>
+
+<div class="service-card">
+<h3>Construcción Integral</h3>
+<p>Ejecución completa de proyectos llave en mano.</p>
+</div>
+
+<div class="service-card">
+<h3>Remodelaciones</h3>
+<p>Modernización de locales comerciales y espacios empresariales.</p>
+</div>
+
+<div class="service-card">
+<h3>Franquicias</h3>
+<p>Implementación y expansión de conceptos comerciales exitosos.</p>
+</div>
+
+<div class="service-card">
+<h3>Diseño Interior</h3>
+<p>Espacios funcionales con identidad visual y experiencia de usuario.</p>
+</div>
+
+<div class="service-card">
+<h3>Branding Comercial</h3>
+<p>Desarrollo de imagen y presencia para marcas y negocios.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="proyectos">
+
+<h2 class="section-title">
+Proyectos <span>Destacados</span>
+</h2>
+
+<div class="projects">
+
+<div class="project">
+<img src="images/bierplatz.jpg" alt="">
+<div class="project-content">
+<h3>Bierplatz</h3>
+<p>Conceptualización, diseño y construcción.</p>
+</div>
+</div>
+
+<div class="project">
+<img src="images/distrillantas.jpg" alt="">
+<div class="project-content">
+<h3>Distrillantas</h3>
+<p>Diseño corporativo y adecuación comercial.</p>
+</div>
+</div>
+
+<div class="project">
+<img src="images/franquicias.jpg" alt="">
+<div class="project-content">
+<h3>Franquicias Comerciales</h3>
+<p>Implementación integral de marcas y puntos de venta.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+¿Por qué <span>Elegirnos?</span>
+</h2>
+
+<div class="stats">
+
+<div class="stat">
+<h2>100+</h2>
+<p>Proyectos</p>
+</div>
+
+<div class="stat">
+<h2>10+</h2>
+<p>Años de experiencia</p>
+</div>
+
+<div class="stat">
+<h2>100%</h2>
+<p>Compromiso</p>
+</div>
+
+<div class="stat">
+<h2>24/7</h2>
+<p>Soporte</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contacto">
+
+<div class="contact">
+
+<h2 class="section-title">
+Contáctanos
+</h2>
+
+<p>📍 Ecuador</p>
+<p>📧 contacto@mediamachine.com</p>
+<p>📱 +593 XXX XXX XXX</p>
+
+<a class="btn" href="#">
+WhatsApp
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 Media Machine. Todos los derechos reservados.
+</p>
+
+</footer>
+
+</body>
+</html>
